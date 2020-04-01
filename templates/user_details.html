@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Secret
+User
 {% endblock %}
 
 {% block content %}
@@ -10,13 +10,14 @@ Secret
 <div>Last name: {{user.last_name}}</div>
 <div>Email: {{user.email}}</div>
 <a href="/logout" class="btn btn-danger">Log out</a>
+<a href="/users/{{user.username}}/feedback/add">Add Feedback</a>
 
 <h2>Feedbacks</h2>
 {% for feedback in user.feedbacks %}
 <div>
     <p>{{feedback.title}}</p>
     <p>{{feedback.content}}</p>
-    <a href="/feedback/{{feedback.id}}/update">edit</a>
+    <a href="/users/feedback/{{feedback.id}}/update">edit</a>
 </div>
 {% endfor %}
 

@@ -20,7 +20,14 @@ class LoginForm(FlaskForm):
     password = PasswordField("Password", validators=[InputRequired()])
 
 
-class EditFeedbackForm(FlaskForm):
+class AddFeedbackForm(FlaskForm):
+    """ Form for adding feedback """
+
+    title = StringField("Title", validators=[InputRequired()])
+    content = StringField("Content", validators=[InputRequired()])
+
+
+class UpdateFeedbackForm(FlaskForm):
     """Form to edit feedback"""
 
     title = StringField("Title", validators=[Optional()])

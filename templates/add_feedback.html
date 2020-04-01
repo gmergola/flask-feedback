@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Edit feedback
+Add feedback
 {% endblock %}
 
 {% block content %}
-<h2>Edit Feedback</h2>
+<h2>Add Feedback</h2>
 
 <form method="POST">
   {{form.hidden_tag()}}
@@ -21,9 +21,9 @@ Edit feedback
       </p>
   {% endfor %}
 
-  <button class="btn btn-primary" type="submit">Edit</button>
+  <button class="btn btn-primary" type="submit">Add</button>
 </form>
-<a class="btn btn-light" href="users/{{feedback.username}}">Cancel</a>
+<a class="btn btn-light" href="/users/{{user.username}}">Cancel</a>
 
 
 
